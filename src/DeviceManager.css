@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.banner {
+    background: #2b4259;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+.manager-body {
+    text-align: center;
+    padding-top: 5rem;
+}
+select, span {
+    margin-left: 0.5rem;
+}
+select, input {
+    padding: 0.5rem;
+    border: 1px solid #a1a1a1;
+}
+button {
+    background: #2b4259;
+    padding: 0.5rem 1rem 0.5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 0.5rem;
+}
+button:hover {
+    cursor: pointer;
+    background: #4f688b;
+}
+.modal {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0 1rem 1rem;
+    border: 1px solid #888;
+    width: 25rem;
+    text-align: center;
+}
+.modal-container {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 8rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modalSelect {
+    margin-left: 0;
+    width: 100%;
+}
+tr {
+    height: 3rem;
+}
+.modal-exit {
+    position: absolute;
+    margin-left: 11rem;
+    padding: 0.5rem;
+    background: white;
+    border: none;
+    color: black;
+}
+.modal-exit:hover {
+    color: white;
+}
+.deviceTable {
+    display: inline-block;
+    margin: 2rem;
+    max-height: 40rem;
+    overflow-y: scroll;
+}
+.deviceInfoCell {
+    line-height: 1.5rem;
+    text-align: left;
+    padding: 0.2rem;
+}
+.deviceTableCell {
+    border-bottom: 1px solid lightgrey;
+}
+#typeFilterSelect {
+    vertical-align: middle;
+}
