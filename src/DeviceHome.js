@@ -11,6 +11,7 @@ const invalidNumericEntries = [101, 43, 45, 46]
 class DeviceHome extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       devices: [],
       isAddDeviceModalOpen: false,
@@ -106,8 +107,8 @@ class DeviceHome extends React.Component {
           })
           this.setState({devices: data})
         }
-      }).catch(() => {
-        console.log('Error fetching device data from server.  Is the server running on port 3000?')
+      }).catch((err) => {
+        console.error(`Error fetching device data from server.  ${err}  Is the server running on port 3000?`)
     })
   }
 
@@ -159,8 +160,8 @@ class DeviceHome extends React.Component {
             filteredDevices: filteredByType ? this.getFilteredDevices(filteredByType, tempArr) : []
           })
         }
-      }).catch(() => {
-        console.log('Error adding new device.  Is the server running on port 3000?')
+      }).catch((err) => {
+        console.error(`Error adding new device. ${err}  Is the server running on port 3000?`)
     })
   }
 
@@ -215,8 +216,8 @@ class DeviceHome extends React.Component {
             filteredDevices: filteredByType ? this.getFilteredDevices(filteredByType, tempArr) : []
           })
         }
-      }).catch(() => {
-        console.log('Error updating device.  Is the server running on port 3000?')
+      }).catch((err) => {
+        console.error(`Error updating device. ${err}  Is the server running on port 3000?`)
     })
   }
 
@@ -244,8 +245,8 @@ class DeviceHome extends React.Component {
             filteredDevices: filteredByType ? this.getFilteredDevices(filteredByType, tempArr) : []
           })
         }
-      }).catch(() => {
-        console.log('Error deleting device.  Is the server running on port 3000?')
+      }).catch((err) => {
+        console.error(`Error deleting device. ${err}  Is the server running on port 3000?`)
     })
   }
 
@@ -330,7 +331,7 @@ class DeviceHome extends React.Component {
   onChangeUpdatedDeviceCapacity = (e) =>
     this.setState({updatedDeviceCapacity: e.target.value})
 
-  addDeviceModal() {
+  addDeviceModal = () => {
     const {
       addedDeviceCapacity,
       addedDeviceType,
@@ -356,7 +357,7 @@ class DeviceHome extends React.Component {
     )
   }
 
-  updateDeviceModal() {
+  updateDeviceModal = () => {
     const {
       updatedDeviceCapacity,
       updatedDeviceType,
@@ -383,7 +384,7 @@ class DeviceHome extends React.Component {
   }
 
 
-  getHeaderSelects() {
+  getHeaderSelects = () => {
     return (
       <div>
         <span>Device Type:</span>
