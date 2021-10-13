@@ -1,5 +1,5 @@
 ## Thank you for your consideration of my submissiion for the NinjaRMM device manager challenge
-This submisson uses RCA to host the app
+This submisson uses CRA to host the app
 
 ## Running the app
 Please ensure the provided server is running as per its readme
