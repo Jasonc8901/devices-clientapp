@@ -61,6 +61,7 @@ class DeviceHome extends React.Component {
     return deviceArr.map((device) => {
       return (
         <DeviceRow
+          key={device.id}
           onOpenUpdateDeviceModal={this.onOpenUpdateDeviceModal}
           deleteDevice={this.deleteDevice}
           device={device}

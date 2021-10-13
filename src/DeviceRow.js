@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const DeviceRow = ({device, onOpenUpdateDeviceModal, deleteDevice}) => {
   return (
-    <tr key={device.id}>
+    <tr>
       <td className='deviceInfoCell deviceTableCell'>
         {device.system_name}
         <br />
