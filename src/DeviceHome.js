@@ -289,10 +289,9 @@ class DeviceHome extends React.Component {
   sortDevices = (e) => {
     const value = e.target.value
     const {filteredByType, filteredDevices, devices} = this.state
-    let sortedDevices = devices
-    let sortedFilteredDevices = filteredDevices
+    let sortedFilteredDevices = [...filteredDevices]
 
-    sortedDevices = this.sortDeviceList(devices, value)
+    const sortedDevices = this.sortDeviceList(devices, value)
 
     if (filteredByType) {
       sortedFilteredDevices = this.sortDeviceList(filteredDevices, value)
@@ -411,7 +410,7 @@ class DeviceHome extends React.Component {
         {this.addDeviceModal()}
         {this.updateDeviceModal()}
         <div className='banner'>
-          NinjaRMM Device Manager
+          Device Manager
         </div>
         <div className='manager-body'>
           {this.getHeaderSelects()}
